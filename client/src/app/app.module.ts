@@ -12,12 +12,13 @@ import { FormsModule } from '@angular/forms';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { UserService } from './shared/user.service';
 
 import { AuthGuard } from './auth/auth.guard';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,11 @@ import { AuthGuard } from './auth/auth.guard';
     HttpClientModule
 
   ],
-  providers: [AuthGuard, UserService],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  },AuthGuard,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
