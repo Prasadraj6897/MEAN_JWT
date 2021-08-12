@@ -18,3 +18,7 @@ in shared folder
 
      Parameter 'authCredentials' implicitly has an 'any' type.ts(7006)
             use "noImplicitAny": false, in tsconfig.json
+
+
+ng g g auth fot guard data
+        we are using this for wheter user is logged in or not
