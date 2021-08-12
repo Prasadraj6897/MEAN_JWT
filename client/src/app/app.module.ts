@@ -13,12 +13,16 @@ import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { SignInComponent } from './user/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    SignupComponent
+    SignupComponent,
+    UserProfileComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
