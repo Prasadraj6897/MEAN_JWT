@@ -5,7 +5,7 @@ const ctrlUser = require('../controllers/user.controller');
 
 
 router.post('/register', ctrlUser.register);
-// router.post('/authenticate', ctrlUser.authenticate);
-// router.get('/userProfile',jwtHelper.verifyJwtToken, ctrlUser.userProfile);
+router.post('/authenticate', ctrlUser.authenticate);
+router.get('/userProfile',jwtHelper.verifyJwtToken, ctrlUser.userProfile);
 
 module.exports = router;

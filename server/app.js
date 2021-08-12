@@ -1,4 +1,5 @@
 require('./models/user.models.js'); //without this it showing error of schema hasn't been registere\
+require('./config/passportConfig');
 
 
 const express = require('express');
@@ -16,6 +17,9 @@ var app = express();
 // middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use(passport.initialize());
+
 
 app.use('/api', rtsIndex);
 
