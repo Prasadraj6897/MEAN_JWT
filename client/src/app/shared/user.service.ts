@@ -6,6 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,4 +21,15 @@ export class UserService {
   postUser(user: User){
     return this.http.post(environment.apiBaseUrl+'/register',user);
   }
+
+  login(authCredentials) {
+    return this.http.post(environment.apiBaseUrl + '/authenticate', authCredentials);
+  }
+
+   //Helper Methods
+
+   setToken(token: string) {
+    localStorage.setItem('token', token);
+  }
+
 }

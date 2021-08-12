@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
+import { UserService } from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

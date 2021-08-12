@@ -14,3 +14,7 @@ in shared folder
 
     [(ngModel)] = is for input 
      [ngClass] = is for css
+
+
+     Parameter 'authCredentials' implicitly has an 'any' type.ts(7006)
+            use "noImplicitAny": false, in tsconfig.json
