@@ -10,3 +10,7 @@ in shared folder
 
 
     next inject service in component typescript file in signup.component.ts
+
+
+    [(ngModel)] = is for input 
+     [ngClass] = is for css
