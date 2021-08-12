@@ -1,5 +1,5 @@
 
-	<form #signUpForm="ngForm" >
+	<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
 		<input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" name="fullName" placeholder="Full Name"
 			required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">
 		<div *ngIf="signUpForm.submitted && !fullName.valid">

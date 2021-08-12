@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule
 
   ],
   providers: [],
