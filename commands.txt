@@ -1,0 +1,12 @@
+in shared folder
+    user.service.ts  we need to define models in service class
+         selectedUser: User = {
+                fullName: '',
+                email: '',
+                password: ''
+            };
+
+    in user.service.ts is used as post, get, put , delete like seivices
+
+
+    next inject service in component typescript file in signup.component.ts
